@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from enum import Enum
 from pathlib import Path
 from typing import Any, Iterable, List, NewType, Optional, Tuple, Union
+import inspect
 
 
 DataClass = NewType("DataClass", Any)
@@ -69,7 +70,8 @@ class HfArgumentParser(ArgumentParser):
                 if field.default is True:
                     field_name = f"--no-{field.name}"
                     kwargs["dest"] = field.name
-            elif hasattr(field.type, "__origin__") and issubclass(field.type.__origin__, List):
+            elif hasattr(field.type, "__origin__") and inspect.isclass(field.type.__origin__) and issubclass(field.type.__origin__, List): # vinc: potential bug fix
+            # elif hasattr(field.type, "__origin__") and issubclass(field.type.__origin__, List):
                 kwargs["nargs"] = "+"
                 kwargs["type"] = field.type.__args__[0]
                 assert all(

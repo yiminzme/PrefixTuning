@@ -13,7 +13,7 @@ if __name__ == '__main__':
     parser.add_argument('--mode', type=str, default='data2text', help='')
     parser.add_argument('--tuning_mode', type=str, default='prefixtune', help='')
     parser.add_argument('--optim_prefix', type=str, default='yes', help='')
-    parser.add_argument('--preseqlen', type=int, default=10, help='')
+    parser.add_argument('--preseqlen', type=int, default=10, help='') # vinc: probably prefix length
     parser.add_argument('--prefix_mode', type=str, default='activation', help='')
     parser.add_argument('--format_mode', type=str, default='cat', help='')
 
@@ -335,7 +335,7 @@ if __name__ == '__main__':
 
     controlprefix = ('yes' if args.tuning_mode == 'prefixtune' else 'no')
 
-    COMMANDLINE="python run_language_modeling.py \
+    COMMANDLINE="python gpt2/run_language_modeling.py \
         --output_dir={} \
         --model_type=gpt2 \
         --model_name_or_path={} \

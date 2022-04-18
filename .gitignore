@@ -1,2 +1,3 @@
 transformers/build/
 transformers/src/transformers.egg-info/
+*.pyc
