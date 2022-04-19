@@ -1,3 +1,7 @@
 transformers/build/
 transformers/src/transformers.egg-info/
 *.pyc
+nohup*.out
+cache/*
+save_e2e_models_convcheck/*
+transformers/examples/text-generation/e2e_results_conv2/*

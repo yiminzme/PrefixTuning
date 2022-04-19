@@ -261,7 +261,7 @@ if __name__ == '__main__':
 
 
 
-    COMMANDLINE = "python run_generation.py \
+    COMMANDLINE = "python gpt2/run_generation.py \
         --model_type=gpt2 \
         --length 100 \
         --model_name_or_path={} \

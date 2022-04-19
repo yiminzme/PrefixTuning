@@ -498,6 +498,8 @@ def main():
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
+    # vinc: print pid
+    print("kill ", os.getpid())
 
     if data_args.eval_data_file is None and training_args.do_eval:
         raise ValueError(
