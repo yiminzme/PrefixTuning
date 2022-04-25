@@ -773,7 +773,7 @@ def main():
 
     if args.task_mode == 'data2text':
 
-        QUICK_CHECK = True # vinc: enable quick_check
+        QUICK_CHECK = False # vinc: toggle quick_check
 
         if QUICK_CHECK:
 

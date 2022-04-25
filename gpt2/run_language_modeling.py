@@ -1056,8 +1056,8 @@ def main():
 
         print('running evaluation on ', checkpoint_path)
 
-        # os.system('python gen.py data2text yes valid {} no'.format(checkpoint_path))
-        # os.system('python gen.py data2text yes test {} no'.format(checkpoint_path))
+        # os.system('python gpt2/gen.py data2text yes valid {} no'.format(checkpoint_path))
+        # os.system('python gpt2/gen.py data2text yes test {} no'.format(checkpoint_path))
 
     elif data_args.task_mode == 'data2text':
         del model
@@ -1070,11 +1070,11 @@ def main():
 
         print('running evaluation on ', checkpoint_path)
         print('suggested code:')
-        print('python gen.py data2text yes valid {} no'.format(checkpoint_path))
-        print('python gen.py data2text yes test {} no'.format(checkpoint_path))
+        print('python gpt2/gen.py data2text yes valid {} no'.format(checkpoint_path))
+        print('python gpt2/gen.py data2text yes test {} no'.format(checkpoint_path))
 
-        os.system('python gen.py data2text yes valid {} no'.format(checkpoint_path))
-        os.system('python gen.py data2text yes test {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py data2text yes valid {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py data2text yes test {} no'.format(checkpoint_path))
 
         if 'earlystop' in  training_args.output_dir:
             elem = os.path.abspath(training_args.output_dir)
@@ -1084,8 +1084,8 @@ def main():
 
             print('running early stopping evaluation on ', checkpoint_path)
 
-            os.system('python gen.py data2text yes valid {} no'.format(checkpoint_path))
-            os.system('python gen.py data2text yes test {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py data2text yes valid {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py data2text yes test {} no'.format(checkpoint_path))
 
 
 
@@ -1100,10 +1100,10 @@ def main():
 
         print('running evaluation on ', checkpoint_path)
 
-        print('python gen.py webnlg yes valid {} no'.format(checkpoint_path))
-        print('python gen.py webnlg yes test {} no'.format(checkpoint_path))
-        os.system('python gen.py webnlg yes valid {} no'.format(checkpoint_path))
-        os.system('python gen.py webnlg yes test {} no'.format(checkpoint_path))
+        print('python gpt2/gen.py webnlg yes valid {} no'.format(checkpoint_path))
+        print('python gpt2/gen.py webnlg yes test {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py webnlg yes valid {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py webnlg yes test {} no'.format(checkpoint_path))
 
 
         # also run for early stopping:
@@ -1115,10 +1115,10 @@ def main():
 
             print('running early stopping evaluation on ', checkpoint_path)
 
-            print('python gen.py webnlg yes valid {} no'.format(checkpoint_path))
-            print('python gen.py webnlg yes test {} no'.format(checkpoint_path))
-            os.system('python gen.py webnlg yes valid {} no'.format(checkpoint_path))
-            os.system('python gen.py webnlg yes test {} no'.format(checkpoint_path))
+            print('python gpt2/gen.py webnlg yes valid {} no'.format(checkpoint_path))
+            print('python gpt2/gen.py webnlg yes test {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py webnlg yes valid {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py webnlg yes test {} no'.format(checkpoint_path))
         
         
     elif data_args.task_mode == 'triples':
@@ -1132,9 +1132,9 @@ def main():
 
         print('running evaluation on ', checkpoint_path)
 
-        print('python gen.py triples yes valid {} no'.format(checkpoint_path))
-        os.system('python gen.py triples yes valid {} no'.format(checkpoint_path))
-        os.system('python gen.py triples yes test {} no'.format(checkpoint_path))
+        print('python gpt2/gen.py triples yes valid {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py triples yes valid {} no'.format(checkpoint_path))
+        os.system('python gpt2/gen.py triples yes test {} no'.format(checkpoint_path))
 
 
         if 'earlystop' in  training_args.output_dir:
@@ -1145,8 +1145,8 @@ def main():
 
             print('running early stopping evaluation on ', checkpoint_path)
 
-            os.system('python gen.py triples yes valid {} no'.format(checkpoint_path))
-            os.system('python gen.py triples yes test {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py triples yes valid {} no'.format(checkpoint_path))
+            os.system('python gpt2/gen.py triples yes test {} no'.format(checkpoint_path))
 
 
     return results

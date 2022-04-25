@@ -282,10 +282,12 @@ if __name__ == '__main__':
 
 
     if MODEL_FILE == 'gpt2-large':
-        COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-large-s3 '
+        # COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-large-s3 '
+        COMMANDLINE += ' --cache_dir cache/gpt2-large-s3 '
 
     if MODEL_FILE == 'gpt2-medium':
-        COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-medium-s3 '
+        # COMMANDLINE += ' --cache_dir /u/scr/xlisali/contrast_LM/transformers/examples/control/gpt2-medium-s3 '
+        COMMANDLINE += ' --cache_dir cache/gpt2-medium-s3 '
 
 
     print(COMMANDLINE)
@@ -299,4 +301,3 @@ if __name__ == '__main__':
         full_command = "nlprun -a lisa-base-torch -g 1 -n {} -x jagupard4,jagupard5,jagupard6,jagupard7,jagupard8,jagupard28,jagupard29 \'{}\'".format(name,COMMANDLINE)
         print(full_command)
         os.system(full_command)
-
