@@ -8,7 +8,8 @@ echo $now_format;
 
 
 
-COMET_API_KEY=ff2z1CAs1CJqbr4pF9J3eI4Ui nohup time python -u gpt2/train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00008 --mode data2text --bsz 10 --seed 100 --tuning_mode prefixtune --cache_dir ./cache > "log/$now prefix.log" &
+# COMET_API_KEY=ff2z1CAs1CJqbr4pF9J3eI4Ui nohup time python -u gpt2/train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00008 --mode data2text --bsz 10 --seed 101 --tuning_mode prefixtune --cache_dir ./cache > "log/$now prefix.log" &
+COMET_API_KEY=ff2z1CAs1CJqbr4pF9J3eI4Ui nohup time python -u gpt2/train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00008 --mode data2text --bsz 10 --seed 100 --tuning_mode prefixtune --cache_dir ./cache > "log/$now prefix_e2e.log" &
 
 # COMET_API_KEY=ff2z1CAs1CJqbr4pF9J3eI4Ui nohup time python -u gpt2/gen.py data2text yes valid /home/ubuntu/vinc/PrefixTuning/save_e2e_models_convcheck/data2textprefixtune_y_5_act_cat_b=10-e=5_d=0.0_u=no_lr=8e-05_w=0.0_s=101_r=n_m=512_o=1_o=1 no > "log/$now valid1.log" &
 # COMET_API_KEY=ff2z1CAs1CJqbr4pF9J3eI4Ui nohup time python -u gpt2/gen.py data2text yes test /home/ubuntu/vinc/PrefixTuning/save_e2e_models_convcheck/data2textprefixtune_y_5_act_cat_b=10-e=5_d=0.0_u=no_lr=8e-05_w=0.0_s=101_r=n_m=512_o=1_o=1 no > "log/$now test1.log" &
