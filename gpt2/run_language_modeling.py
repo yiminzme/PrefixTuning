@@ -496,6 +496,7 @@ def main():
     # We now keep distinct sets of args, for a cleaner separation of concerns.
 
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
+    TrainingArguments.n_gpu = 0 if TrainingArguments.no_cuda else 1 # vinc: only work as 1 when gpus are available
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
     # vinc: print pid

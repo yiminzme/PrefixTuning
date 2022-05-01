@@ -13,7 +13,7 @@ if __name__ == '__main__':
     parser.add_argument('--mode', type=str, default='data2text', help='')
     parser.add_argument('--tuning_mode', type=str, default='prefixtune', help='')
     parser.add_argument('--optim_prefix', type=str, default='yes', help='')
-    parser.add_argument('--preseqlen', type=int, default=10, help='') # vinc: probably prefix length
+    parser.add_argument('--preseqlen', type=int, default=10, help='') # vinc: prefix length
     parser.add_argument('--prefix_mode', type=str, default='activation', help='')
     parser.add_argument('--format_mode', type=str, default='cat', help='')
 
