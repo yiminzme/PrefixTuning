@@ -4,5 +4,4 @@ transformers/src/transformers.egg-info/
 nohup*.out
 cache/*
 save_e2e_models_convcheck/*
-transformers/examples/text-generation/e2e_results_conv2/*
-log/*
+# transformers/examples/text-generation/e2e_results_conv2/*
